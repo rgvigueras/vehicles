@@ -1,0 +1,21 @@
+<h2 class="title">Listado de marcas</h2>
+
+<div class="search-bar">
+  <mat-form-field appearance="outline">
+    <mat-label>Buscar marca</mat-label>
+    <input matInput type="text" [formControl]="searchCtrl" placeholder="Buscar">
+  </mat-form-field>
+</div>
+
+@if (filteredBrands().length === 0) {
+  <div class="loading-container">
+    <p>No hay resultados</p>
+  </div>
+} @else {
+  <cdk-virtual-scroll-viewport itemSize="96" class="scroll-container">
+    @for (brand of filteredBrands(); track brand.Make_ID) {
+      <app-brand-item [brand]="brand" (click)="openBrand(brand)"></app-brand-item>
+    }
+  </cdk-virtual-scroll-viewport>
+  <div class="count">{{ filteredBrands().length }} marcas encontradas</div>
+}

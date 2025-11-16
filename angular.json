@@ -80,6 +80,10 @@
                 "input": "public"
               }
             ],
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "styles": [
               "src/styles.scss"
             ]

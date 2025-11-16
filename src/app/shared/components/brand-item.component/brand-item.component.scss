@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+mat-card {
+  margin: 0.5rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+  background-color: var(--mat-surface-container, #fff);
+  align-items: center;
+  height: 80px;
+}
+
+mat-card-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--mat-primary-900, #2c387e);
+}
+
+mat-card-subtitle {
+  color: #666;
+  font-size: 0.9rem;
+}

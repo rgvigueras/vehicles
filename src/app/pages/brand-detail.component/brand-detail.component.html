@@ -1,0 +1,39 @@
+@if(details()) {
+    <ng-container >
+      <mat-card>
+        <mat-card-title>Modelos disponibles</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-list>
+            @for (model of details()?.models; track model.Model_ID) {
+                <mat-list-item >
+                  {{ model.Model_Name }}
+                </mat-list-item>
+            }
+        </mat-list>
+        <mat-divider class="my-4"></mat-divider>
+        <mat-card-title>Tipos de vehículo</mat-card-title>
+        <mat-list>
+            @for (type of details()?.types; track type.VehicleTypeId) {
+          <mat-list-item>
+            {{ type.VehicleTypeName }}
+          </mat-list-item>
+        }
+        </mat-list>
+        <div class="actions">
+          <button mat-raised-button color="primary" (click)="goBack()">Volver</button>
+        </div>
+      </mat-card>
+    </ng-container>
+  }
+  @else {
+    <ng-template #loading>
+        <div class="loading-container">
+        <mat-spinner></mat-spinner>
+        <p>Cargando detalles de la marca...</p>
+        </div>
+    </ng-template>
+  }
+
+
+
+
