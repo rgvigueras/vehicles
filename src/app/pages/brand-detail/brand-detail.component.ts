@@ -4,7 +4,6 @@ import { Store } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDividerModule } from '@angular/material/divider';
 import { BrandDetails } from '../../state/brands/brands.state';
 import { BrandsActions, BrandsSelectors } from '../../state';
@@ -17,7 +16,6 @@ import { MatAnchor } from "@angular/material/button";
     CommonModule,
     MatCardModule,
     MatListModule,
-    MatProgressSpinnerModule,
     MatDividerModule,
     MatAnchor
 ],

@@ -148,20 +148,17 @@ describe('VpicApiService', () => {
 
   describe('URL construction', () => {
     it('should construct correct URLs for different endpoints', async () => {
-      // getAllMakes
       const promise1 = firstValueFrom(service.getAllMakes());
       const req1 = httpMock.expectOne(`${baseUrl}/getallmakes?format=json`);
       req1.flush({ Results: [] });
       await promise1;
 
-      // getModelsForMakeId
       const makeId = 100;
       const promise2 = firstValueFrom(service.getModelsForMakeId(makeId));
       const req2 = httpMock.expectOne(`${baseUrl}/getmodelsformakeId/${makeId}?format=json`);
       req2.flush({ Results: [] });
       await promise2;
 
-      // getVehicleTypesForMakeId
       const promise3 = firstValueFrom(service.getVehicleTypesForMakeId(makeId));
       const req3 = httpMock.expectOne(`${baseUrl}/GetVehicleTypesForMakeId/${makeId}?format=json`);
       req3.flush({ Results: [] });

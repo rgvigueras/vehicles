@@ -33,7 +33,6 @@ describe('BrandItemComponent', () => {
     component = fixture.componentInstance;
     debugElement = fixture.debugElement;
     
-    // Set the required input
     component.brand = mockBrand;
     fixture.detectChanges();
   });

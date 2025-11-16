@@ -23,7 +23,6 @@ describe('BrandDetailComponent', () => {
       }
     };
 
-    // Mock selectSignal to return a signal
     mockStore.selectSignal.and.returnValue(signal(undefined));
 
     await TestBed.configureTestingModule({
